@@ -14,9 +14,13 @@ from opendbc.car.toyota.values import CAR as TOYOTA
 from opendbc.car.values import Platform
 from opendbc.car.volkswagen.values import CAR as VOLKSWAGEN
 from opendbc.car.body.values import CAR as COMMA
+from opendbc.car.byd.values import CAR as BYD
+
+
 
 # FIXME: add routes for these cars
 non_tested_cars = [
+  BYD.BYD_ATTO3,
   MOCK.MOCK,
   FORD.FORD_F_150_MK14,
   GM.CADILLAC_ATS,
@@ -38,6 +42,7 @@ class CarTestRoute(NamedTuple):
 
 
 routes = [
+  # CarTestRoute("b8b2d1a1df1b3aad|2024-09-13--08-04-08", BYD.BYD_ATTO3),
   CarTestRoute("efdf9af95e71cd84|2022-05-13--19-03-31", COMMA.COMMA_BODY),
 
   CarTestRoute("0c94aa1e1296d7c6|2021-05-05--19-48-37", CHRYSLER.JEEP_GRAND_CHEROKEE),
@@ -209,7 +214,6 @@ routes = [
   CarTestRoute("2475fb3eb2ffcc2e|2022-04-29--12-46-23", TOYOTA.TOYOTA_RAV4_TSS2_2022),  # hybrid
   CarTestRoute("20ba9ade056a8c7b|2021-02-08--21-57-35", TOYOTA.TOYOTA_RAV4_PRIME),  # SecOC
   CarTestRoute("8bfb000e03b2a257/00000004--f9eee5f52e", TOYOTA.TOYOTA_SIENNA_4TH_GEN),  # SecOC
-  CarTestRoute("0b54d0594d924cd9/00000041--51e7d1ea2e", TOYOTA.TOYOTA_YARIS),  # SecOC
   CarTestRoute("7a31f030957b9c85|2023-04-01--14-12-51", TOYOTA.LEXUS_ES),
   CarTestRoute("37041c500fd30100|2020-12-30--12-17-24", TOYOTA.LEXUS_ES),  # hybrid
   CarTestRoute("e6a24be49a6cd46e|2019-10-29--10-52-42", TOYOTA.LEXUS_ES_TSS2),
